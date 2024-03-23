@@ -41,6 +41,5 @@ app.post('/insert',async (req,res) => {
 
 app.get('/getdata',async (req,res) => {
     let result = await studentModel.find({},{'_id':0, 'name':1});
-    console.log(result);
     res.send(result);
 })
